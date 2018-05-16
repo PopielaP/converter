@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Converter meters/feet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/my_css.css">
+    </head>
+
+    <body>
+
+    <br><br>
+    <div class="container col-lg-4 col-lg-offset-4">
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#mf">Meters/Feet</a></li>
+            <li><a data-toggle="tab" href="#fm">Feet/Meters</a></li>
+         </ul>
+
+
+        <div class="tab-content">
+             <div id="mf" class="tab-pane fade in active">
+                <h4>Meters</h4>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="meters">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-default" onclick="metersFeet()">PRZELICZ</button>
+                    <h4 id="text"></h4>
+                </div>
+             </div>
+
+             <div id="fm" class="tab-pane fade">
+                <h4>Feet</h4>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="feet">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default" onclick="feetMeters()">PRZELICZ</button>
+                    <h4 id="text1"></h4>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+    function metersFeet() {
+        var x = document.getElementById("meters").value;
+        document.getElementById("text").innerHTML = x * 3.2808399 + " feet";
+    }
+
+    function feetMeters() {
+        var x = document.getElementById("feet").value;
+        document.getElementById("text1").innerHTML = x * 0.3048 + " meters";
+    }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </body>
+    </html>
